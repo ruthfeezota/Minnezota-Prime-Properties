@@ -26,7 +26,7 @@ export default function FAQ() {
       a: "Yes. Your information is handled securely and never shared without your permission.",
     },
     {
-      q: "Can I get a mortgage if I live outside UAE?",
+      q: "Can I get a mortgage if I live outside Minnesota?",
       a: "Yes, many lenders offer mortgages for international buyers depending on eligibility.",
     },
     {
@@ -51,7 +51,7 @@ export default function FAQ() {
         {/* RIGHT FAQ PANEL */}
         <div className="bg-[#0F4A43] px-10 md:px-16 py-12 flex flex-col justify-center">
 
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white uppercase leading-tight">
+          <h2 className="max-w-[1100px] text-white font-medium leading-[0.95] tracking-[-0.06em] text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[4.3rem]">
             Frequently Asked
             <br />
             Questions
@@ -71,7 +71,7 @@ export default function FAQ() {
                       setOpenIndex(isOpen ? -1 : index)
                     }
                   >
-                    <span className="uppercase tracking-wide text-sm font-bold text-white">
+                    <span className="uppercase tracking-wide text-md font-bold text-white">
                       {item.q}
                     </span>
 
@@ -82,7 +82,7 @@ export default function FAQ() {
 
                   {/* Answer */}
                   {isOpen && (
-                    <div className="mt-4 text-sm text-white/80 leading-relaxed">
+                    <div className="mt-4 text-md text-white/80 leading-relaxed">
                       {item.a}
                     </div>
                   )}

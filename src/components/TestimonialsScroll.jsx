@@ -7,9 +7,9 @@ export default function TestimonialsEditorial() {
       {
         id: 1,
         quote:
-          "Arvane is a premium real estate brand that blends modern aesthetics with seamless, user-centered experiences. We specialize in connecting discerning clients with high-quality, elegantly designed homes that reflect both comfort and sophistication.",
+          "Minnezota Properties is a premium real estate brand that blends modern aesthetics with seamless, user-centered experiences. We specialize in connecting discerning clients with high-quality, elegantly designed homes that reflect both comfort and sophistication.",
         quote2:
-          "From intuitive search tools to personalized support, every touchpoint is crafted to make your property journey effortless, reliable, and inspiring. At Arvane, we don’t just sell homes, we help you find the space where life truly begins.",
+          "From intuitive search tools to personalized support, every touchpoint is crafted to make your property journey effortless, reliable, and inspiring. At Minnezota Properties, we don’t just sell homes, we help you find the space where life truly begins.",
         name: "Aizan Mohammad",
         role: "Product Designer",
         avatar: sample,
@@ -69,26 +69,26 @@ export default function TestimonialsEditorial() {
           {/* Set 1 */}
           <div className="flex shrink-0 items-center">
             <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
-              COMFORT {' '} LIVE WITH ARVANE
+              COMFORT {' '} LIVE WITH Minnezota Properties
             </h2>
             <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
-              COMFORT {' '} LIVE WITH ARVANE
+              COMFORT {' '} LIVE WITH Minnezota Properties
             </h2>
-            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
-              COMFORT LIVE WITH ARVANE
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
+              COMFORT LIVE WITH Minnezota Properties
             </h2>
           </div>
 
           {/* Set 2 duplicate for seamless loop */}
           <div className="flex shrink-0 items-center">
-            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
-              COMFORT, LIVE WITH ARVANE
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
+              COMFORT, LIVE WITH Minnezota Properties
             </h2>
-            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
-              COMFORT, LIVE WITH ARVANE
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
+              COMFORT, LIVE WITH Minnezota Properties
             </h2>
-            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
-              COMFORT, LIVE WITH ARVANE
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
+              COMFORT, LIVE WITH Minnezota Properties
             </h2>
           </div>
         </div>
@@ -101,8 +101,8 @@ export default function TestimonialsEditorial() {
           {/* Left */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="text-4xl leading-none text-black/15">/</span>
-              <h3 className="text-4xl font-semibold tracking-tight text-black sm:text-5xl">
+             
+              <h3 className="max-w-[1100px] text-black font-medium leading-[0.95] tracking-[-0.06em] text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[4.3rem]">
                 Testimonial
               </h3>
             </div>

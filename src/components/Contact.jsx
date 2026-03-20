@@ -3,10 +3,11 @@ import sample from "../assets/hero-bg.jpg";
 
 export default function ContactSplitSection() {
   return (
-    <section className="">
-      <div className="grid min-h-[720px] grid-cols-1 overflow-hidden bg-[#1f1f1f] lg:grid-cols-2">
+    <section>
+      <div className="grid min-h-[560px] grid-cols-1 overflow-hidden bg-[#1f1f1f] lg:grid-cols-2">
+        
         {/* Left Image */}
-        <div className="relative min-h-[360px] lg:min-h-full">
+        <div className="relative min-h-[300px] lg:min-h-full">
           <img
             src={sample}
             alt="Modern cabin home"
@@ -15,44 +16,47 @@ export default function ContactSplitSection() {
         </div>
 
         {/* Right Form */}
-        <div className="flex items-center bg-[#1f1f1f] px-6 py-10 sm:px-10 md:px-14 lg:px-16 xl:px-20">
-          <div className="w-full">
-            <h2 className="max-w-[680px] text-[2.2rem] font-light leading-[1.15] tracking-[-0.03em] text-white sm:text-[2.8rem] md:text-[3.4rem] lg:text-[4rem]">
+        <div className="flex items-center bg-[#1f1f1f] px-6 py-8 sm:px-8 md:px-10 lg:px-12">
+          <div className="w-full max-w-[620px]">
+            
+            {/* Title */}
+            <h2 className="max-w-[1100px] text-white font-medium leading-[0.95] tracking-[-0.06em] text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[4.3rem]">
               Still haven’t found what you’re looking for?
             </h2>
 
-            <form className="mt-10 space-y-6">
+            <form className="mt-8 space-y-5">
+              
               {/* First + Last Name */}
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
-                  <label className="mb-3 block text-[15px] font-normal text-white">
+                  <label className="mb-2 block text-sm text-white">
                     First Name
                   </label>
                   <input
                     type="text"
                     placeholder="First name"
-                    className="h-14 w-full border-none bg-[#3a3a3a] px-5 text-[16px] text-white placeholder:text-[#b9b9b9] outline-none ring-0"
+                    className="h-12 w-full bg-[#3a3a3a] px-4 text-sm text-white placeholder:text-[#b9b9b9] outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="mb-3 block text-[15px] font-normal text-white">
+                  <label className="mb-2 block text-sm text-white">
                     Last Name
                   </label>
                   <input
                     type="text"
-                    placeholder="First name"
-                    className="h-14 w-full border-none bg-[#3a3a3a] px-5 text-[16px] text-white placeholder:text-[#b9b9b9] outline-none ring-0"
+                    placeholder="Last name"
+                    className="h-12 w-full bg-[#3a3a3a] px-4 text-sm text-white placeholder:text-[#b9b9b9] outline-none"
                   />
                 </div>
               </div>
 
               {/* Intent */}
               <div>
-                <label className="mb-3 block text-[15px] font-normal text-white">
+                <label className="mb-2 block text-sm text-white">
                   I Want to
                 </label>
-                <select className="h-14 w-full appearance-none border-none bg-[#3a3a3a] px-5 text-[16px] text-[#d3d3d3] outline-none ring-0">
+                <select className="h-12 w-full bg-[#3a3a3a] px-4 text-sm text-[#d3d3d3] outline-none">
                   <option>Buy Property</option>
                   <option>Sell Property</option>
                   <option>Rent Property</option>
@@ -62,25 +66,26 @@ export default function ContactSplitSection() {
 
               {/* Message */}
               <div>
-                <label className="mb-3 block text-[15px] font-normal text-white">
+                <label className="mb-2 block text-sm text-white">
                   Message
                 </label>
                 <textarea
-                  rows={5}
+                  rows={4}
                   placeholder="Write here..."
-                  className="min-h-[170px] w-full resize-none border-none bg-[#3a3a3a] px-5 py-5 text-[16px] text-white placeholder:text-[#b9b9b9] outline-none ring-0"
+                  className="min-h-[120px] w-full resize-none bg-[#3a3a3a] px-4 py-3 text-sm text-white placeholder:text-[#b9b9b9] outline-none"
                 />
               </div>
 
               {/* Submit */}
-              <div className="pt-8">
+              <div className="pt-4">
                 <button
                   type="submit"
-                  className="flex h-14 w-full items-center justify-center rounded-sm bg-white text-[18px] font-medium text-black transition hover:bg-[#f2f2f2]"
+                  className="h-[64px] rounded-full bg-[#E46C3A] px-10 text-[1.05rem] font-medium text-white transition hover:brightness-95 sm:min-w-[210px]"
                 >
                   Submit
                 </button>
               </div>
+
             </form>
           </div>
         </div>

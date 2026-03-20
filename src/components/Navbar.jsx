@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 /**
- * Minnesota Properties Navbar
+ * Minnezota Properties Navbar
  * Vibe: earthy + editorial + calm luxury
  * Colors:
  *  - Pine: #0F3B35
@@ -45,7 +45,7 @@ export default function Navbar() {
       <div className="hidden md:block bg-[#0F3B35] text-white">
         <div className="mx-auto max-w-screen-2xl px-6 py-2 flex items-center justify-between">
           <p className="text-[12px] tracking-wide text-white/85">
-            Minnesota Properties: calm guidance for buying, selling, and investing.
+            Minnezota Properties: calm guidance for buying, selling, and investing.
           </p>
 
           <div className="flex items-center gap-5">

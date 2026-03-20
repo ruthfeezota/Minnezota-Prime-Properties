@@ -25,7 +25,7 @@ export default function DiscoverProperties() {
     },
     {
       id: 3,
-      title: "Arvane Heights",
+      title: "Minnezota Properties Heights",
       location: "Bogor Tengah",
       price: "$750,000",
       beds: 3,
@@ -71,14 +71,13 @@ export default function DiscoverProperties() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3">
-            <span className="text-black/20 text-3xl">/</span>
-            <h2 className="text-4xl sm:text-5xl font-semibold text-black tracking-tight">
+            <h2 className="max-w-[1100px] text-black font-medium leading-[0.95] tracking-[-0.06em] text-[1.5rem] sm:text-[2rem] md:text-[3rem] lg:text-[4.3rem]">
               Discover Properties
             </h2>
           </div>
 
-          <p className="mt-4 max-w-xl text-sm text-black/60">
-            Arvane is a premium real estate brand that blends modern design with seamless
+          <p className="mt-4 max-w-xl text-md text-black/60">
+            Minnezota Properties is a premium real estate brand that blends modern design with seamless
             experiences. We help you discover elegant, high-quality.
           </p>
         </div>
