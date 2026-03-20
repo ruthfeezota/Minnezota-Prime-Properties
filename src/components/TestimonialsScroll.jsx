@@ -1,109 +1,187 @@
 import React, { useMemo, useState } from "react";
+import sample from "../assets/hero-bg.jpg";
 
-export default function TestimonialsScroll() {
+export default function TestimonialsEditorial() {
   const testimonials = useMemo(
     () => [
       {
+        id: 1,
         quote:
-          "I had a very good experience working with Minnesota Properties. They responded quickly, understood exactly what I needed, and delivered as promised. I’d gladly give a 5-star review for the amazing service.",
-        name: "Mohammed Ali",
+          "Arvane is a premium real estate brand that blends modern aesthetics with seamless, user-centered experiences. We specialize in connecting discerning clients with high-quality, elegantly designed homes that reflect both comfort and sophistication.",
+        quote2:
+          "From intuitive search tools to personalized support, every touchpoint is crafted to make your property journey effortless, reliable, and inspiring. At Arvane, we don’t just sell homes, we help you find the space where life truly begins.",
+        name: "Aizan Mohammad",
+        role: "Product Designer",
+        avatar: sample,
       },
       {
+        id: 2,
         quote:
-          "Clear communication, no pressure, and every step explained. The whole process felt simple and organized from start to finish.",
-        name: "Sarah J.",
+          "Working with this team felt refreshingly clear from the very beginning. Every recommendation was thoughtful, every detail was handled carefully, and the overall experience felt elevated without ever becoming overwhelming.",
+        quote2:
+          "What stood out most was the balance between modern presentation and genuine human support. They made the search feel less transactional and far more personal, which made all the difference for us.",
+        name: "Sarah Kim",
+        role: "Interior Consultant",
+        avatar: sample,
       },
       {
+        id: 3,
         quote:
-          "We sold faster than we expected and felt supported the entire time. Great strategy, great negotiation, great results.",
-        name: "Derrick M.",
+          "The process felt beautifully organized and unexpectedly calm. We always knew what step came next, and the homes presented to us actually matched the lifestyle and design direction we were looking for.",
+        quote2:
+          "There’s a polished quality to the entire experience, but it never feels cold. It feels intentional, elegant, and incredibly well designed from first click to final decision.",
+        name: "Daniel Hart",
+        role: "Creative Director",
+        avatar: sample,
+      },
+      {
+        id: 4,
+        quote:
+          "This was one of the few property experiences that felt genuinely premium without trying too hard. Everything was refined, intuitive, and grounded in what actually mattered to us as buyers.",
+        quote2:
+          "Their approach gave us confidence at every stage. It felt less like browsing listings and more like being guided toward a home that fit the way we actually wanted to live.",
+        name: "Leila Noor",
+        role: "Brand Strategist",
+        avatar: sample,
       },
     ],
     []
   );
 
   const [index, setIndex] = useState(0);
-  const prev = () => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
-  const next = () => setIndex((i) => (i + 1) % testimonials.length);
+  const total = testimonials.length;
+  const current = testimonials[index];
 
-  const t = testimonials[index];
+  const prev = () => setIndex((i) => (i - 1 + total) % total);
+  const next = () => setIndex((i) => (i + 1) % total);
+
+  const progress = ((index + 1) / total) * 100;
 
   return (
-    <section className="relative overflow-hidden bg-[#F4F1E8] py-16 sm:py-20">
-      {/* subtle paper speckle */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.08]"
-        style={{
-          backgroundImage: "radial-gradient(rgba(0,0,0,0.45) 1px, transparent 1px)",
-          backgroundSize: "22px 22px",
-        }}
-      />
+    <section className="overflow-hidden bg-[#f5f5f3] px-6 py-14 sm:px-8 sm:py-16 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="h-px w-full bg-black/12" />
+      </div>
 
-      <div className="relative mx-auto max-w-6xl px-6">
-        <h2 className="text-center text-2xl sm:text-3xl font-extrabold tracking-tight text-[#3A2A22] uppercase">
-          Hear From Our Happy Clients
-        </h2>
+      {/* Full-width continuous marquee */}
+      <div className="relative left-1/2 right-1/2 my-10 w-screen -translate-x-1/2 overflow-hidden sm:my-14">
+        <div className="flex w-max animate-[marquee_40s_linear_infinite]">
+          {/* Set 1 */}
+          <div className="flex shrink-0 items-center">
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
+              COMFORT {' '} LIVE WITH ARVANE
+            </h2>
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem] text-[#E46C3A]">
+              COMFORT {' '} LIVE WITH ARVANE
+            </h2>
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
+              COMFORT LIVE WITH ARVANE
+            </h2>
+          </div>
 
-        <div className="mt-10 flex items-center justify-center gap-5">
-          {/* Left arrow */}
-          <button
-            type="button"
-            onClick={prev}
-            aria-label="Previous testimonial"
-            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/40 text-[#3A2A22]/70 hover:bg-white/70 hover:text-[#3A2A22] transition"
-          >
-            ‹
-          </button>
+          {/* Set 2 duplicate for seamless loop */}
+          <div className="flex shrink-0 items-center">
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
+              COMFORT, LIVE WITH ARVANE
+            </h2>
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
+              COMFORT, LIVE WITH ARVANE
+            </h2>
+            <h2 className="whitespace-nowrap pr-10 text-[3rem] font-semibold uppercase leading-none tracking-[-0.05em] text-black sm:text-[4.75rem] md:text-[6rem] lg:text-[7rem]">
+              COMFORT, LIVE WITH ARVANE
+            </h2>
+          </div>
+        </div>
+      </div>
 
-          {/* Scroll card */}
-          <div className="relative w-full max-w-3xl">
-            {/* Use the scroll image as a BACKGROUND so text is always on top */}
-            <div
-              className="relative w-full aspect-[16/7] sm:aspect-[16/6] bg-center bg-contain bg-no-repeat"
-              style={{
-                backgroundImage: "url(/images/scroll-testimonial.png)",
-              }}
-            >
-              {/* Text layer */}
-              <div className="absolute inset-0 z-10 flex items-center justify-center px-8 sm:px-14">
-                <div className="max-w-xl text-center">
-                  <p className="text-sm sm:text-[15px] leading-relaxed text-[#3A2A22]/85">
-                    {t.quote}
-                  </p>
+      <div className="mx-auto max-w-7xl">
+        <div className="h-px w-full bg-black/12" />
 
-                  <p className="mt-5 text-sm font-semibold text-[#3A2A22]">
-                    - {t.name}.
-                  </p>
+        <div className="grid grid-cols-1 gap-14 py-12 md:grid-cols-[1fr_1.1fr] md:gap-20 lg:gap-28">
+          {/* Left */}
+          <div>
+            <div className="flex items-center gap-3">
+              <span className="text-4xl leading-none text-black/15">/</span>
+              <h3 className="text-4xl font-semibold tracking-tight text-black sm:text-5xl">
+                Testimonial
+              </h3>
+            </div>
+
+            <div className="mt-10 flex items-center gap-4">
+              <img
+                src={current.avatar}
+                alt={current.name}
+                className="h-16 w-16 rounded-full object-cover"
+              />
+
+              <div>
+                <div className="text-xl font-medium tracking-tight text-black">
+                  {current.name}
                 </div>
+                <div className="mt-1 text-sm text-black/45">{current.role}</div>
               </div>
             </div>
           </div>
 
-          {/* Right arrow */}
-          <button
-            type="button"
-            onClick={next}
-            aria-label="Next testimonial"
-            className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-white/40 text-[#3A2A22]/70 hover:bg-white/70 hover:text-[#3A2A22] transition"
-          >
-            ›
-          </button>
+          {/* Right */}
+          <div className="flex flex-col justify-between">
+            <div className="max-w-3xl space-y-8 text-[1.05rem] leading-[1.7] text-black/62 sm:text-[1.15rem]">
+              <p>{current.quote}</p>
+              <p>{current.quote2}</p>
+            </div>
+
+            <div className="mt-12 flex items-center gap-4 sm:gap-6">
+              <button
+                type="button"
+                onClick={prev}
+                aria-label="Previous testimonial"
+                className="flex h-16 w-16 items-center justify-center rounded-full border border-black/8 bg-transparent text-3xl text-black/80 transition hover:border-black/15 hover:bg-white"
+              >
+                ‹
+              </button>
+
+              <div className="flex flex-1 items-center gap-4 sm:gap-5">
+                <span className="min-w-[2rem] text-lg text-black/45">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <div className="relative h-px flex-1 bg-black/12">
+                  <div
+                    className="absolute left-0 top-0 h-px bg-black transition-all duration-500"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
+
+                <span className="min-w-[2rem] text-right text-lg text-black/45">
+                  {String(total).padStart(2, "0")}
+                </span>
+              </div>
+
+              <button
+                type="button"
+                onClick={next}
+                aria-label="Next testimonial"
+                className="flex h-16 w-16 items-center justify-center rounded-full border border-black/8 bg-transparent text-3xl text-black/80 transition hover:border-black/15 hover:bg-white"
+              >
+                ›
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Dots */}
-        <div className="mt-8 flex items-center justify-center gap-2">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              aria-label={`Go to testimonial ${i + 1}`}
-              className={`h-2.5 w-2.5 rounded-full transition ${
-                i === index ? "bg-[#3A2A22]" : "bg-[#3A2A22]/25 hover:bg-[#3A2A22]/40"
-              }`}
-            />
-          ))}
-        </div>
+        <div className="h-px w-full bg-black/12" />
       </div>
+
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

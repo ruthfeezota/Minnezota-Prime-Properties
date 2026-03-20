@@ -4,14 +4,14 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth"; 
 
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCS-_m_AilyHe41M57GJ-5q4ID2uTYA21s",
-  authDomain: "darxx830-7b39c.firebaseapp.com",
-  projectId: "darxx830-7b39c",
-  storageBucket: "darxx830-7b39c.firebasestorage.app",
-  messagingSenderId: "690687159459",
-  appId: "1:690687159459:web:c1ed866544e929b33ae316",
-  measurementId: "G-2W9M454Z47"
+  apiKey: "AIzaSyAnpaSMLeHwzAHZiszbWdtjJk9A8MJf8qA",
+  authDomain: "minnezota-properties-90d6f.firebaseapp.com",
+  projectId: "minnezota-properties-90d6f",
+  storageBucket: "minnezota-properties-90d6f.firebasestorage.app",
+  messagingSenderId: "267460483726",
+  appId: "1:267460483726:web:23e6a91cfdc13cd871c7df"
 };
 
 

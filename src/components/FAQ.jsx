@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import sample from "../assets/hero-bg.jpg";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -41,7 +42,7 @@ export default function FAQ() {
         {/* LEFT IMAGE */}
         <div className="relative w-full h-[420px] md:h-auto">
           <img
-            src="/images/faq-building.jpg"
+            src={sample}
             alt="Modern building"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -50,7 +51,7 @@ export default function FAQ() {
         {/* RIGHT FAQ PANEL */}
         <div className="bg-[#0F4A43] px-10 md:px-16 py-12 flex flex-col justify-center">
 
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white uppercase leading-tight">
             Frequently Asked
             <br />
             Questions

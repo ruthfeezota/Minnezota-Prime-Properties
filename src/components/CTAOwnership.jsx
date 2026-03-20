@@ -1,73 +1,57 @@
 import React from "react";
+import sample from "../assets/hero-bg.jpg";
 
 /**
- * CTAOwnership (matches reference)
- * - Light lavender dotted background
- * - Left: big headline + short copy + button
- * - Right: large home image
- * - Full-bleed (no side padding by default)
+ * Newsletter / CTA section
  *
- * Put your image at: /public/images/cta-home.png
- * or change the src below.
+ * Put your image at:
+ * /public/images/property-newsletter.jpg
+ *
+ * Or replace the src below with your own image path.
  */
 
 export default function CTAOwnership() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#D9D4FF]">
-      {/* dotted texture */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-35"
-        style={{
-          backgroundImage: "radial-gradient(rgba(0,0,0,0.22) 1px, transparent 1px)",
-          backgroundSize: "18px 18px",
-        }}
-      />
-      {/* soft top torn edge vibe */}
-      <div
-        className="pointer-events-none absolute top-0 left-0 right-0 h-10"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.14), rgba(0,0,0,0))",
-          opacity: 0.08,
-        }}
-      />
+    <section className="w-full bg-[#f3f3f3] px-4 py-10 sm:px-6 md:px-8 lg:px-10">
+      <div className="relative mx-auto w-full max-w-[1800px] overflow-hidden rounded-[28px]">
+        {/* Background image */}
+        <img
+          src={sample}
+          alt="Modern property exterior"
+          className="absolute inset-0 h-full w-full object-cover"
+          loading="lazy"
+        />
 
-      <div className="relative grid grid-cols-1 md:grid-cols-2 items-stretch">
-        {/* LEFT COPY */}
-        <div className="px-8 sm:px-12 py-14 sm:py-16 flex items-center">
-          <div className="max-w-lg">
-            <h2 className="text-[#0F3B35] font-extrabold uppercase leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-5xl">
-              Take the next step in
-              <br />
-              ownership!
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* Content */}
+        <div className="relative flex min-h-[420px] items-center justify-center px-6 py-14 sm:px-10 md:min-h-[500px] md:px-16 lg:min-h-[580px]">
+          <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center text-center">
+            <h2 className="max-w-[1100px] text-white font-medium leading-[0.95] tracking-[-0.06em] text-[2.2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5.3rem]">
+              Stay Updated on Latest Property
             </h2>
 
-            <p className="mt-5 text-sm sm:text-base text-[#0F3B35]/80 leading-relaxed max-w-md">
-              Expert guidance for smart property investments. Simplifying your
-              journey to finding the perfect home.
+            <p className="mt-5 text-white/85 text-sm sm:text-base md:text-[1.05rem]">
+              Never miss a beat and stay update
             </p>
 
-            <div className="mt-8">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[#0F3B35] px-6 py-3 text-xs sm:text-sm font-semibold uppercase tracking-widest text-white hover:opacity-95 transition"
-              >
-                Request a call back
-              </a>
-            </div>
-          </div>
-        </div>
+            {/* Email pill form */}
+            <form className="mt-10 flex w-full max-w-[760px] flex-col gap-4 sm:mt-12 sm:flex-row sm:items-center sm:rounded-full sm:bg-white sm:p-[4px]">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="h-[64px] w-full rounded-full border-0 bg-white px-7 text-[1.05rem] text-black placeholder:text-black/55 outline-none sm:flex-1 sm:rounded-full sm:bg-transparent"
+              />
 
-        {/* RIGHT IMAGE */}
-        <div className="relative min-h-[260px] md:min-h-[420px]">
-          <img
-            src="/images/cta-home.png"
-            alt="Modern home exterior"
-            className="absolute inset-0 h-full w-full object-cover"
-            loading="lazy"
-          />
-          {/* slight contrast overlay like the screenshot */}
-          <div className="pointer-events-none absolute inset-0 bg-black/5" />
+              <button
+                type="submit"
+                className="h-[64px] rounded-full bg-[#b98200] px-10 text-[1.05rem] font-medium text-white transition hover:brightness-95 sm:min-w-[210px]"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

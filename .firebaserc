@@ -1,7 +1,8 @@
 {
   "projects": {
-    "default": "darxx830-7b39c",
-    "darxx830": "darxx830-7b39c"
+    "default": "minnezota-properties",
+    "darxx830": "darxx830-7b39c",
+    "MinneZota Properties": "minnezota-properties"
   },
   "targets": {},
   "etags": {}

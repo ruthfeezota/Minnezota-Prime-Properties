@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import heroImage from "../assets/hero-bg.jpg"; // Replace with your actual image path
 
 /**
  * Minnesota Properties - Simple Navbar + Simple Hero
@@ -46,7 +47,7 @@ export default function Hero() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-[11px] sm:text-xs font-semibold text-white hover:bg-white/15 transition"
             >
-              Request a Call Back
+              Request a Call
               <span className="grid h-6 w-6 place-items-center rounded-full bg-white/15 text-[12px]">
                 →
               </span>
@@ -71,7 +72,7 @@ export default function Hero() {
             <button
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
-              className="grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/10 hover:bg-white/15 transition"
+              className=""
             >
               <span className="block h-[2px] w-[18px] bg-white" />
               <span className="mt-[5px] block h-[2px] w-[18px] bg-white" />
@@ -147,7 +148,7 @@ export default function Hero() {
               onClick={() => setMenuOpen(false)}
               className="mt-12 inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0F3B35] hover:opacity-95 transition"
             >
-              Request a Call Back →
+              Request a Call →
             </a>
 
             {/* Tiny trust nudge (no borders, not loud) */}
@@ -162,13 +163,13 @@ export default function Hero() {
       <section className="relative min-h-[92vh] overflow-hidden">
         {/* Background image (swap this path) */}
         <img
-          src="/images/hero-bg.jpg"
+          src={heroImage}
           alt="Modern homes in Minnesota"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
         {/* Orange overlay + subtle geometry (matches screenshot vibe) */}
-        <div className="absolute inset-0 bg-[#E46C3A]/75" />
+        <div className="absolute inset-0 bg-[#0F3B35]/75" />
         <div
           className="absolute inset-0 opacity-25"
           style={{
@@ -180,7 +181,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/10" />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto max-w-screen-2xl px-6 pt-28 sm:pt-32">
+        <div className="relative z-10 mx-auto max-w-screen-2xl px-6 pt-28 sm:pt-48">
           <div className="mx-auto max-w-4xl text-center text-white">
             <p className="text-[11px] sm:text-xs uppercase tracking-[0.35em] text-white/85">
               Minnesota Properties
